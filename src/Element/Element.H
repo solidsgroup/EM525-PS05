@@ -137,7 +137,7 @@ public:
 
     virtual std::array<Set::Vector,N> Deta(Set::Vector y) = 0;
 
-    Eigen::Matrix2d Jacobian(Set::Vector Y)
+    Set::Matrix Jacobian(Set::Vector Y)
     {
         // TODO - copy from previous
     }
