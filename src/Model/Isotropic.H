@@ -11,7 +11,7 @@ class Isotropic : public Model<2>
 {
 public:
 
-    virtual Set::Scalar  W(Eigen::Matrix2d gradu)
+    virtual Set::Scalar  W(Set::Matrix gradu)
     {
         Set::Scalar ret = 0.0;
 
@@ -29,7 +29,7 @@ public:
 
         return ret;
     }
-    virtual Set::Matrix  DW(Eigen::Matrix2d gradu)
+    virtual Set::Matrix  DW(Set::Matrix gradu)
     {
         Set::Matrix ret = Set::Matrix::Zero();
 
@@ -44,7 +44,7 @@ public:
 
         return ret;
     }
-    virtual Set::Tensor4 DDW(Eigen::Matrix2d gradu)
+    virtual Set::Tensor4 DDW(Set::Matrix gradu)
     {
         Set::Tensor4 ret = Set::Tensor4::Zero();
 
