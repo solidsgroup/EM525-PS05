@@ -37,6 +37,7 @@ public:
         //
         // TODO: Calculate the energy of the element as a function of
         //       nodal displacement.
+        //       (See Problem 1)
         //
         //
         // Input: the argument "u" is an array of vectors.
@@ -61,19 +62,7 @@ public:
 
         
         //
-        // Hint 2: use the element's Jacobian function
-        //         to calculate the Jacobian as a function of
-        //         position.
-        //
-
-        //
-        // Hint 3: You can use the ".inverse()" and ".determinant()"
-        //         functions to calculate the inverse and
-        //         determinant of the Jacobian matrix.
-        //
-
-        //
-        // Hint 4: To evaluate the elastic model at a point, you can
+        // Hint 2: To evaluate the elastic model at a point, you can
         //         use the following expression:
         //            model[q].W(gradu)
         //         where q is a quadrature point index, gradu is a
@@ -81,7 +70,6 @@ public:
         //         result is a scalar value for the energy.
         //         (you can do the same thing for DW and DDW)
         //
-
 
         return ret;
     }
@@ -95,6 +83,7 @@ public:
         //
         // TODO: Calculate the derivative of energy of the element as a function of
         //       nodal displacement.
+        //       (See Problem 1 part a)
         //
         //
         // Input: the argument "u" is an array of vectors just as before.
@@ -118,6 +107,7 @@ public:
         //
         // TODO: Calculate the second derivative of energy of the element as a function of
         //       nodal displacement.
+        //       (See Problem 1 part b)
         //
         // Input: the argument "u" is an array of vectors just as before.
         //

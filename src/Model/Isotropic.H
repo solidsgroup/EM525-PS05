@@ -18,6 +18,7 @@ public:
         //
         // TODO: calculate strain energy density as a function of
         //       displacement gradient (gradu=beta)
+        //       (See PS 4 Problem 2)
         //
         // The constants lambda and mu are available in this class
         // and are set to a value of 1
@@ -30,11 +31,12 @@ public:
     }
     virtual Set::Matrix  DW(Eigen::Matrix2d gradu)
     {
-        Set::Matrix ret;
+        Set::Matrix ret = Set::Matrix::Zero();
 
         //
         // TODO: calculate the first derivative of strain energy
         //       (which is stress) as a function of gradu
+        //       (See PS 4 Problem 2)
         //
         // Consistency will be checked in main.cpp using a numerical
         // derivative test
@@ -44,17 +46,18 @@ public:
     }
     virtual Set::Tensor4 DDW(Eigen::Matrix2d gradu)
     {
-        Set::Tensor4 ret;
+        Set::Tensor4 ret = Set::Tensor4::Zero();
 
         //
         // TODO: calculate the second derivative of strain energy
         //       (which is the elastic modulus tensor) as a function
         //       of gradu.
+        //       (See PS 4 Problem 2)
         //
-        // Note that "ret" is a "Tensor4" type.
+        // Note that "ret" is a "Tensor4" type which is a 4th order tensor.
         //
         // You can get the "ijkl"th component of ret with
-        //     ret[i][j][k][l]
+        //     ret(i,j,k,l)
         //
 
         return ret;
