@@ -11,9 +11,9 @@ template<int D>
 class Model
 {
 public:
-    virtual Set::Scalar   W(Eigen::Matrix2d) = 0;
-    virtual Set::Matrix   DW(Eigen::Matrix2d) = 0;
-    virtual Set::Tensor4  DDW(Eigen::Matrix2d) = 0;
+    virtual Set::Scalar   W(Set::Matrix) = 0;
+    virtual Set::Matrix   DW(Set::Matrix) = 0;
+    virtual Set::Tensor4  DDW(Set::Matrix) = 0;
 };
 }
 #endif

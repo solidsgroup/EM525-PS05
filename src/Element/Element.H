@@ -102,7 +102,7 @@ public:
     std::array<std::array<Set::Matrix,N>,N> DDW(std::array<Set::Vector,N> &u)
     {
         std::array<std::array<Set::Matrix,N>,N> ret;
-        for (int n = 0; n < N; n++) for (int m = 0; m < N; m++) ret[n][m] = Eigen::Matrix2d::Zero();
+        for (int n = 0; n < N; n++) for (int m = 0; m < N; m++) ret[n][m] = Set::Matrix::Zero();
         
         //
         // TODO: Calculate the second derivative of energy of the element as a function of

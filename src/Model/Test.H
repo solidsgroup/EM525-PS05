@@ -20,13 +20,13 @@ public:
 
         for (int iter = 0; iter < 100 ; iter++)
         {
-            Eigen::Matrix2d gradu = Eigen::Matrix2d::Random();
+            Set::Matrix gradu = Set::Matrix::Random();
 
-            Eigen::Matrix2d dw_exact = model.DW(gradu);
+            Set::Matrix dw_exact = model.DW(gradu);
             for (int i = 0 ; i < 2 ; i++)
                 for (int j = 0 ; j < 2 ; j++)
                 {
-                    Eigen::Matrix2d dx = Eigen::Matrix2d::Zero();
+                    Set::Matrix dx = Set::Matrix::Zero();
                     dx(i,j) = small;
 
                     double dw_numerical_ij = (model.W(gradu) - model.W(gradu-dx)) / small;
@@ -43,11 +43,11 @@ public:
             for (int i = 0 ; i < 2 ; i++)
                 for (int j = 0 ; j < 2 ; j++)
                 {
-                    Eigen::Matrix2d dx = Eigen::Matrix2d::Zero();
+                    Set::Matrix dx = Set::Matrix::Zero();
                     dx(i,j) = small;
                 
 
-                    Eigen::Matrix2d ddw_numerical_ij = (model.DW(gradu) - model.DW(gradu-dx)) / small;
+                    Set::Matrix ddw_numerical_ij = (model.DW(gradu) - model.DW(gradu-dx)) / small;
 
                     for (int k = 0; k < 2 ; k++)
                         for (int l = 0; l < 2 ; l++)
